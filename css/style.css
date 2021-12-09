@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* opste - primenjivo na sve  */ 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+    color:#ff4d4d;
+}
+
+h2 {
+    margin: 30px 0;
+    text-align: center;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+ul {
+    list-style: none;
+}
+
+a, a:link, a:visited{
+    color: #ff8080;
+}
+
+#wrapper {
+    width: 100%;
+    position: relative;
+}
+
+/*  header */
+header {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: 3px solid #ff4d4d;
+    z-index: 100;
+}
+
+#logo {
+    margin-right: 15px;
+}
+
+#logo img {
+    height: 70px;
+    filter: grayscale(100%);
+}
+
+#logo img:hover {
+    filter: none;
+}
+
+#naslov {
+    margin-right: auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 4px;
+    word-spacing: 6px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited,
+#a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: #333;
+}
+nav ul li a:hover,
+#a:hover, a:hover {
+    color: #f66;
+}
+nav ul li a:active,
+a:active{
+    color: #f33;
+}
+
+#a {
+    position: relative;
+}
+
+#a ul {
+    display: none;
+    position: absolute;
+    top:100%;
+    left:0;
+    background-color: white;
+}
+#a i {
+    opacity: 0;
+}
+#a:hover i {
+    opacity: 1;
+}
+#a:hover ul {
+    display: block;
+}
+/*  glavni deo sajta sa sekcijama */
+
+main > :not(#hero) {
+    padding: 100px 50px 50px;
+}
+
+main > :nth-child(even) {
+    background-color: white;
+    color: #333;
+}
+
+main > :nth-child(odd) {
+    background-color: black;
+    color: white;
+}
+
+#hero { 
+    width: 100vw;
+    height: 50vw;
+    background: black url("https://i.ibb.co/cQbv79s/hero.jpg") no-repeat scroll center;
+    background-size: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#welcome {
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    left:50px;
+    top: 30%;
+    bottom: 30%;
+    color: white;
+    font-size: 40px;
+    padding: 5% 0;
+}
+
+
+/* section proizvodi */ 
+.proizvodi {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.proizvod {
+    position: relative;
+    padding: 15px 10px 30px;
+}
+
+.proizvod:hover {
+    outline : 2px solid #ff9999;
+}
+
+.proizvod p {
+    position: absolute;
+    right: -40px;
+    top: -20px;
+    width: 60px;
+    height: 20px;
+    padding: 10px;
+    background-color: #ff9999;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: center;
+    z-index: 50;
+}
+
+.proizvod img {
+    width: 200px;
+    display: block;
+    padding: 20px;
+}
+/* section galerija */
+
+.galerija{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+.slike{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    cursor: zoom-in;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 1200px;
+}
+
+.slike img {
+    width: 200px;
+    height: 200px;
+    margin: 25px 20px;
+    box-shadow: 0 0 0 #0000;
+    opacity: 0.67;
+    filter: grayscale(80%);
+}
+
+.slike img:first-child {
+    border-radius: 10px 10px 0 0;
+}
+.slike img:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.slike img:hover {
+    opacity: 1;
+    z-index: 1;
+    filter: grayscale(0%);
+    border-radius: 5px;
+}
+/* section blog */ 
+
+
+#blog .vesti{  
+  overflow: auto;
+  overflow-x: hidden;
+  height: 400px;
+}
+
+.vest {
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(255, 230, 230,0.2);
+    overflow: hidden;
+}
+.vest:hover {
+    background-color: rgba(255, 230, 230,0.4);
+}
+
+.vest h3{
+    margin: 15px 0;
+}
+
+.vest img {
+    float: left;
+    width: 100px;
+    margin-right: 15px ;
+}
+
+.vest p {
+    margin-bottom: 5px;
+}
+
+/* dugmad */
+
+
+.proizvod button,
+#submit{
+    border: none;
+    display: block;
+    background-color:  #ff4d4d;
+    color: white;
+    padding: 10px 15px;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 80%;
+}
+.proizvod button:hover,
+#submit:hover{
+    background-color: #f66;
+
+}
+.proizvod button:active,
+#submit:active{
+    background-color: #f33;
+
+}
+
+#submit {
+    width: 150px;
+    margin: 40px auto !important;
+}
+
+/* sekcija about */
+
+#about {
+    overflow: hidden;
+}
+
+#about h3 {
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+#about p {
+    margin-bottom: 15px;
+}
+
+#us {
+    padding: 40px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#us img{
+    filter: grayscale(100%);
+    border-radius: 50%;
+    width: 20%;
+    border:2px solid #ff9999;
+}
+
+#us img:hover{
+    filter: grayscale(20%);
+}
+
+#left, #right {
+    margin: 25px 5%;
+    width: 40%;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+
+/* sekcija contact */
+#contact {
+    background-color: white;
+    color: rgb(32, 32, 32);
+    padding-top: 50px;
+}
+
+#contact form { 
+    width:640px;
+    margin:0 auto;
+    padding: 30px;
+}
+#contact form label {
+    display: inline-block;
+    width: 100%;
+}
+
+#contact form input ,
+#contact form textarea{ 
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border-radius: 5px; 
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/*  futer - dno stranice */
+
+
+footer {
+    text-align: center;
+    background-color: black;
+    color:white;
+    padding: 100px 10px 50px;
+}
+footer p:first-child {
+    border-bottom: 2px solid rgb(236,98,94);
+    width: 30%;
+    margin: 20px auto;
+    padding: 20px;
+}
